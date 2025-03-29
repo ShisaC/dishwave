@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Clock, Users, ChevronLeft, Share } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 import Layout from '@/components/layout/Layout';
 import RecipeTimeline from '@/components/recipes/RecipeTimeline';
 import IngredientList from '@/components/recipes/IngredientList';

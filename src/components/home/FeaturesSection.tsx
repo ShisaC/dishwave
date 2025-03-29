@@ -1,10 +1,10 @@
 
 import React from 'react';
-import { LayoutTimeline, Utensils, MonitorSmartphone, Users } from 'lucide-react';
+import { BarChart2, Utensils, MonitorSmartphone, Users } from 'lucide-react';
 
 const features = [
   {
-    icon: <LayoutTimeline className="h-8 w-8 text-primary" />,
+    icon: <BarChart2 className="h-8 w-8 text-primary" />,
     title: 'Interactive Timeline',
     description: 'Navigate recipes with our intuitive horizontal timeline interface that replaces traditional numbered steps.'
   },
