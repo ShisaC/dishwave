@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Search, User, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import FeaturedRecipes from '../home/FeaturedRecipes';
 
 const Header = () => {
   return (
@@ -20,9 +20,9 @@ const Header = () => {
           
           <nav className="hidden gap-6 md:flex">
             <Link to="/" className="text-sm font-medium">Home</Link>
-            <Link to="/recipes" className="text-sm font-medium">Recipes</Link>
-            <Link to="/categories" className="text-sm font-medium">Categories</Link>
-            <Link to="/about" className="text-sm font-medium">About</Link>
+            <Link to="/" className="text-sm font-medium">Recipes</Link>
+            <Link to="/#" className="text-sm font-medium">Categories</Link>
+            <Link to="/#" className="text-sm font-medium">About</Link>
           </nav>
         </div>
         
@@ -70,9 +70,9 @@ const Header = () => {
             <SheetContent>
               <div className="flex flex-col gap-4 pt-10">
                 <Link to="/" className="text-base font-medium">Home</Link>
-                <Link to="/recipes" className="text-base font-medium">Recipes</Link>
-                <Link to="/categories" className="text-base font-medium">Categories</Link>
-                <Link to="/about" className="text-base font-medium">About</Link>
+                <Link to="/" className="text-base font-medium">Recipes</Link>
+                <Link to="/#" className="text-base font-medium">Categories</Link>
+                <Link to="/#" className="text-base font-medium">About</Link>
                 <hr />
                 <Button variant="outline" className="w-full justify-start gap-2">
                   <User className="h-4 w-4" />

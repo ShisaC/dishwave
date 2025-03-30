@@ -1,10 +1,22 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Implement search functionality here
+    console.log('Searching for:', searchQuery);
+    // You would typically redirect to search results page or filter content
+  };
+
   return (
     <section className="relative pt-16 pb-24 overflow-hidden">
       <div 
@@ -16,31 +28,38 @@ const Hero = () => {
       />
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Reimagine Your Cooking Experience
-          </h1>
+          <div className="mb-6">
+            <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold text-primary drop-shadow-md" style={{ paddingBottom: '0.1em' }}>
+              Discover Interactive Cooking Stories
+            </h1>
+          </div>
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
-            Transform traditional recipes into interactive visual journeys. Cook smarter, not harder.
+            Experience recipes like never before—step into a world where every dish is a journey, not just a set of instructions.
           </p>
           
-          <div className="relative max-w-md mx-auto">
+          <form onSubmit={handleSubmit} className="relative max-w-md mx-auto">
             <Search className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
             <Input
               type="search"
-              placeholder="Search for recipes, ingredients, cuisines..."
+              placeholder="Find interactive recipes, cooking guides, and more..."
               className="pl-10 pr-20 h-12 rounded-full"
+              value={searchQuery}
+              onChange={handleSearchChange}
             />
-            <Button className="absolute right-1 top-1 h-10 rounded-full">
-              Search
+            <Button 
+              type="submit" 
+              className="absolute right-1 top-1 h-10 rounded-full"
+            >
+              Explore
             </Button>
-          </div>
+          </form>
           
           <div className="flex flex-wrap justify-center gap-4 mt-6">
-            <Button variant="outline" className="rounded-full">Italian</Button>
-            <Button variant="outline" className="rounded-full">Asian</Button>
-            <Button variant="outline" className="rounded-full">Mexican</Button>
-            <Button variant="outline" className="rounded-full">Dessert</Button>
-            <Button variant="outline" className="rounded-full">Vegetarian</Button>
+            <Button variant="outline" className="rounded-full">Interactive Stories</Button>
+            <Button variant="outline" className="rounded-full">Chef Insights</Button>
+            <Button variant="outline" className="rounded-full">Cooking Challenges</Button>
+            <Button variant="outline" className="rounded-full">Behind the Recipe</Button>
+            <Button variant="outline" className="rounded-full">Food Science</Button>
           </div>
         </div>
       </div>
