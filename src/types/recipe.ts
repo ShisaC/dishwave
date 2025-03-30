@@ -1,5 +1,5 @@
 
-export type Cuisine = 'italian' | 'asian' | 'mexican' | 'dessert' | 'vegetarian';
+export type Cuisine = 'italian' | 'asian' | 'mexican' | 'dessert' | 'vegetarian' | 'indian';
 
 export interface Recipe {
   id: string;

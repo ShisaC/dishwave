@@ -22,8 +22,8 @@ const FeaturedRecipes = ({ recipes }: FeaturedRecipesProps) => {
       <div className="container">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
           <div>
-            <h2 className="font-heading text-3xl font-semibold">Featured Recipes</h2>
-            <p className="text-muted-foreground mt-2">Discover our most loved recipes</p>
+            <h2 className="font-heading text-3xl font-semibold">Featured Recipes - Interactive blogs</h2>
+            <p className="text-muted-foreground mt-2">Discover our most loved recipes and set up your smart cooking to get involved in the entire prcoess</p>
           </div>
           <Link to="/recipes" className="group mt-4 sm:mt-0 flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors">
             View all recipes
